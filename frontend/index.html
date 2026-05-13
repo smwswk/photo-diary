@@ -134,11 +134,12 @@ loadLicense();
 function showPaywall(){
   const html = `
     <div class="paywall">
-      <div class="icon">🔑</div>
+      <div class="icon">📷</div>
       <h2>试用次数已用完</h2>
-      <p class="desc">照片日记由 AI 驱动，每篇日记都有成本。<br>一次购买，永久使用，无订阅。</p>
+      <p class="desc">照片日记由 AI 驱动，每篇都有成本。<br>一次购买，永久使用。</p>
       <div class="price">¥9.9 永久</div>
-      <button class="btn btn-gold" onclick="openPayment()">立即购买</button>
+      <img src="wx-qr.jpg" class="qr-code" alt="微信收款码" style="max-width:240px;border-radius:12px;margin:12px 0">
+      <p class="desc">微信扫码支付后，添加微信 smwswk 发送付款截图领取激活码</p>
       <div class="activate-link" onclick="toggleActivate()">已有激活码？点此输入</div>
       <div class="activate-form" id="activateForm">
         <input type="text" id="activateInput" placeholder="输入激活码" maxlength="32">
@@ -147,7 +148,6 @@ function showPaywall(){
       </div>
     </div>`;
   $('#resultArea').innerHTML = html;
-  document.getElementById('activateInput')?.focus();
 }
 
 function toggleActivate(){
@@ -178,9 +178,9 @@ async function doActivate(){
   }
 }
 
-function openPayment(){
-  // Replace with your 面包多 product URL
-  window.open('https://mbd.pub/xxx', '_blank');
+function openContact(){
+  // Replace with your contact link (WeChat, email, etc.)
+  alert('请将付款截图发送至微信：YOUR_WECHAT_ID');
 }
 
 // ── EXIF ─────────────────────────────────────────────────
