@@ -78,12 +78,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC",sa
 </div>
 <script>
 // ── Config ──────────────────────────────────────────────
-// API_BASE: '' = same-origin (for production when frontend & backend share domain)
-// For local dev: set to 'http://localhost:8888'
-const API_BASE = (()=>{
-  const p = new URLSearchParams(location.search);
-  return p.get('api') || '';  // e.g. ?api=http://localhost:8888
-})();
+const API_BASE = 'https://photo-diary-api.onrender.com';
 
 // ── State ───────────────────────────────────────────────
 const MAX_PHOTOS = 9;
