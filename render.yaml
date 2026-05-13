@@ -2,7 +2,7 @@ services:
   - type: web
     name: photo-diary-api
     runtime: python
-    buildCommand: ""
+    buildCommand: pip install -r requirements.txt
     startCommand: python server.py
     envVars:
       - key: SF_KEY
