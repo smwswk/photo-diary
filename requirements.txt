@@ -1,0 +1,4 @@
+# 照片日记 API 依赖
+# Python 3.11+
+# 无第三方依赖（仅用 stdlib）
+# SiliconFlow API 通过 urllib.request 调用

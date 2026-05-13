@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: photo-diary-api
+    runtime: python
+    buildCommand: ""
+    startCommand: python server.py
+    envVars:
+      - key: SF_KEY
+        sync: false
+      - key: PORT
+        value: "10000"
